@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import  {getLoginStatus } from "@/api/user";
+import { getLoginStatus } from "@/api/user";
 import SideBar from "@/components/SideBar";
 import HeadBar from "@/components/HeadBar";
 
@@ -22,12 +22,16 @@ export default {
     SideBar
   },
   created() {
-    getLoginStatus().then((  ) => {
-      if (this.$route.path === "/") {
-        this.$router.push({name: "home"});
-      }}, (  ) => {
-      this.$router.push({name: "login"});
-    });
+    getLoginStatus().then(
+      () => {
+        if (this.$route.path === "/") {
+          this.$router.push({ name: "home" });
+        }
+      },
+      () => {
+        this.$router.push({ name: "login" });
+      }
+    );
   }
 };
 </script>

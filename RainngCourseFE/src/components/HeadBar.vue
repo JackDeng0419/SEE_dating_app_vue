@@ -46,13 +46,13 @@ export default {
 .head-bar {
   position: absolute;
   box-sizing: border-box;
-  left:10%;
+  left: 10%;
   width: 80%;
   height: 70px;
   font-size: 22px;
   color: #fff;
   background-color: #000000;
-  border-radius:0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .header-ico {

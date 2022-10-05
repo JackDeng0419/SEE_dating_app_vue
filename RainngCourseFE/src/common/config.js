@@ -1,6 +1,6 @@
 let Config = {};
 
-Config.backEndUrl = "http://localhost:8085"
-Config.verify = true;
+Config.backEndUrl = "http://localhost:7001";
+Config.verify = false;
 
 export default Config;

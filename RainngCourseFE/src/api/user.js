@@ -3,17 +3,14 @@ import { post, pureget } from "@/common/ajax";
 const plaintext = 'password';
 const iv = crypto.randomBytes(12);
 const key = crypto.randomBytes(16);*/
-export const match = (formdata) =>
-  post("/login/check", formdata);
+export const match = formdata => post("/login/check", formdata);
 
-export const login = (code) =>
-    post("/login/login", {"code":code});
+export const login = code => post("/login/login", { code: code });
 
-export const signup = (formdata) =>
-    post("/login/signup", formdata);
+export const signup = formdata => post("/login/signup", formdata);
 
 export const getLoginStatus = () => {
-    /*const ciphertext = AES_encrypt(plaintext, key, iv);
+  /*const ciphertext = AES_encrypt(plaintext, key, iv);
     pre_post("/login/status",
         key.toString("base64"),
         iv.toString("base64"),
@@ -34,6 +31,5 @@ export const getLoginStatus = () => {
             return null
         }
     });*/
-    return pureget("/login/status");
-}
-
+  return pureget("/login/status");
+};
